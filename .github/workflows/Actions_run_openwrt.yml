@@ -25,7 +25,7 @@ jobs:
 
       - name: Run OpenWrt in QEMU
         run: |
-          qemu-system-aarch64 -M virt -m 512m \
+          qemu-system-aarch64 -M virt -m 1024m \
             -kernel openwrt-armvirt-64-generic-kernel.bin \
             -append "root=fe00" \
             -hda openwrt-armvirt-64-generic-ext4-rootfs.img \
