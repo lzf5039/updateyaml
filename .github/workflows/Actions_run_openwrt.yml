@@ -2,8 +2,6 @@ name: Run OpenWrt on QEMU
 
 on:
   workflow_dispatch:    # 手动触发
-  schedule:
-   # - cron: '0 */5 * * *'  # 5小时一次
 
 jobs:
   openwrt-qemu:
