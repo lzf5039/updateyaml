@@ -30,5 +30,7 @@ jobs:
             -hda openwrt-armvirt-64-generic-ext4-rootfs.img \
             -no-reboot -nographic \
             -cpu cortex-a76 -smp 4 \
-            -net nic -net user,id=wan,hostfwd=tcp::7080-:80,hostfwd=tcp::7022-:22 &  
-          sleep 18000  # 运行 5 小时 
+            -net nic -net user,id=wan,hostfwd=tcp::7080-:80,hostfwd=tcp::7022-:22
+
+      - name: Wait for 5 hours
+        run: sleep 18000  # 如果需要等待，才用 sleep
